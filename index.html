@@ -13,33 +13,28 @@ body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   display:flex;
   justify-content:center;
-  padding:20px 0;
+  padding:24px 0;
 }
 
-/* ASOSIY BLOK — 600px */
+/* ASOSIY BLOK */
 .phone{
   width:100%;
   max-width:390px;
-  height:600px;
+  height:700px;
   background:#f2f2f2;
   overflow:hidden;
 }
 
-/* YUQORI QISM */
+/* TOP */
 .top{
   display:flex;
   justify-content:center;
-  gap:12px;
-  padding-top:28px;
+  gap:14px;
+  padding-top:26px;
 }
 
-.logo{
-  width:80px;
-}
-
-.cover{
-  width:80px;
-}
+.logo{ width:82px; }
+.cover{ width:82px; }
 
 /* TITLE */
 .title{
@@ -48,7 +43,7 @@ body{
   margin:22px auto 0;
 }
 
-/* BUTTON ZONA */
+/* MARKAZ */
 .center{
   text-align:center;
   margin-top:18px;
@@ -59,6 +54,7 @@ body{
   font-size:14px;
 }
 
+/* BUTTON */
 .btnwrap{
   position:relative;
   display:flex;
@@ -68,10 +64,10 @@ body{
 .btnwrap::after{
   content:"";
   position:absolute;
-  right:28px;
-  top:6px;
-  width:48px;
-  height:48px;
+  right:22px;
+  top:8px;
+  width:52px;
+  height:52px;
   border:2px dashed rgba(30,100,255,.4);
   border-radius:50%;
 }
@@ -79,18 +75,17 @@ body{
 .btn{
   background:linear-gradient(180deg,#2f8bff,#1a6dff);
   color:#fff;
-  padding:14px 36px;
+  padding:14px 38px;
   border-radius:12px;
   font-weight:800;
   text-decoration:none;
-  display:inline-block;
-  box-shadow:0 12px 24px rgba(0,0,0,.25);
+  box-shadow:0 14px 26px rgba(0,0,0,.25);
 }
 
 /* TIMER */
 .timer{
   margin:14px auto 0;
-  width:110px;
+  width:120px;
   background:#ff0000;
   color:#fff;
   padding:10px 0;
@@ -99,20 +94,20 @@ body{
   text-align:center;
 }
 
-/* PASTKI QISM */
+/* PASTKI BLOK */
 .bottom{
   position:relative;
-  height:260px;
-  margin-top:16px;
+  height:310px;
+  margin-top:20px;
   overflow:hidden;
 }
 
 .watermark{
   position:absolute;
-  top:20px;
+  top:22px;
   left:50%;
   transform:translateX(-50%);
-  font-size:44px;
+  font-size:46px;
   font-weight:900;
   color:#1a6dff;
   opacity:.12;
@@ -120,19 +115,21 @@ body{
   line-height:1;
 }
 
+/* USER */
 .user{
   position:absolute;
   bottom:0;
   left:50%;
   transform:translateX(-50%);
-  width:110%;
+  width:105%;
 }
 
+/* BANNER */
 .banner{
   position:absolute;
   right:14px;
-  bottom:60px;
-  width:170px;
+  bottom:78px;
+  width:180px;
 }
 </style>
 </head>
