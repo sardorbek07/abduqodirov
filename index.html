@@ -2,131 +2,229 @@
 <html lang="uz">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Universal Standartlar</title>
   <style>
     *{box-sizing:border-box}
-    body{margin:0;font-family: Arial,sans-serif;background:#fff}
-    .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-    .phone{width:390px;max-width:92vw;background:#fff;overflow:hidden}
-    .screen{background:#f2f2f2;position:relative;padding:34px 26px 0}
-   .top{display:flex;justify-content:center;align-items:flex-start;gap:12px}
-    .logo{width:92px;height:auto;margin-top:26px}
-    .cover{width:92px;height:auto;filter:drop-shadow(0 18px 18px rgba(0,0,0,.22))}
-    .title{width:100%;height:auto;display:block;margin:26px auto 0}
-    .mid{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 0 0}
-    .hint{font-size:14px;color:#1b1b1b;margin:8px 0 12px}
-    .btnwrap{position:relative;display:flex;justify-content:center;width:100%}
-    /* .btnwrap:after{
+    html,body{height:100%;margin:0;padding:0}
+    body{overflow:hidden;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0c1014}
+
+    .stage{
+      width:100vw;
+      height:100dvh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:flex-start;
+      padding:0;
+    }
+
+    .phone{
+      width:100vw;
+      height:100dvh;
+      max-width:100vw;
+      background:#fff;
+      overflow:hidden;
+      border-radius:0;
+      box-shadow:none;
+    }
+
+    .screen{
+      height:100%;
+      background:#f2f2f2;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .upper{
+      flex:0 0 52%;
+      padding:clamp(18px,4.2vw,34px) clamp(16px,4.2vw,26px) 0;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .top{
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:clamp(10px,3vw,14px);
+      margin-top:clamp(4px,1.2vw,8px);
+    }
+
+    .logo{
+      width:clamp(76px,18vw,92px);
+      height:auto;
+      margin-top:clamp(18px,4.2vw,26px);
+      display:block;
+    }
+
+    .cover{
+      width:clamp(76px,18vw,92px);
+      height:auto;
+      display:block;
+      filter:drop-shadow(0 18px 18px rgba(0,0,0,.18));
+    }
+
+    .title{
+      width:100%;
+      height:auto;
+      display:block;
+      margin:clamp(18px,4.6vw,28px) auto 0;
+    }
+
+    .mid{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      margin-top:clamp(10px,2.8vw,16px);
+    }
+
+    .hint{
+      font-size:clamp(13px,3.2vw,14px);
+      color:#1b1b1b;
+      margin:0 0 clamp(10px,2.8vw,12px);
+    }
+
+    .btnwrap{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      width:100%;
+    }
+
+    .btnwrap:after{
       content:"";
       position:absolute;
-      right:10px;
-      top:10px;
-      width:58px;
-      height:58px;
-      border:2px dashed rgba(33,102,255,.45);
+      right:clamp(6px,2.2vw,10px);
+      top:clamp(8px,2.4vw,10px);
+      width:clamp(46px,12vw,58px);
+      height:clamp(46px,12vw,58px);
+      border:2px dashed rgba(33,102,255,.42);
       border-radius:50%;
       transform:rotate(10deg);
       pointer-events:none;
-    } */
+    }
+
     .btn{
-      width:100%;
-      max-width:290px;
+      width:min(290px,100%);
       background:linear-gradient(180deg,#2f8bff,#1a6dff);
       color:#fff;
       text-decoration:none;
       font-weight:800;
       letter-spacing:.6px;
-      font-family: Arial, sans-serif;
-      font-weight: 600;
-      padding:14px 18px;
+      padding:clamp(12px,3.4vw,14px) 18px;
       border-radius:12px;
       box-shadow:0 16px 30px rgba(26,109,255,.35),0 8px 16px rgba(0,0,0,.14);
       display:inline-flex;
       justify-content:center;
       align-items:center;
     }
+
     .timer{
-      margin:16px 0 0;
+      margin-top:clamp(12px,3.6vw,16px);
       background:#ff0000;
       color:#fff;
-      font-weight:600;
-      font-family: Arial, sans-serif;
+      font-weight:900;
       letter-spacing:.8px;
-      padding:10px 22px;
+      padding:clamp(9px,2.6vw,10px) clamp(18px,5vw,22px);
       border-radius:12px;
-      box-shadow:0 14px 26px rgba(255,0,0,.25);
-      font-size:18px;
+      box-shadow:0 14px 26px rgba(255,0,0,.22);
+      font-size:clamp(16px,4.2vw,18px);
       line-height:1;
-      min-width:110px;
+      min-width:clamp(100px,26vw,110px);
       text-align:center;
     }
+
     .lower{
+      flex:0 0 48%;
       position:relative;
-  margin-top:14px;
-  aspect-ratio: 390 / 430;
-  height:auto;
-  overflow:hidden;
+      overflow:hidden;
     }
-   
+
+    .watermark{
+      position:absolute;
+      left:50%;
+      top:clamp(22px,6vw,40px);
+      transform:translateX(-50%);
+      font-weight:900;
+      font-size:clamp(40px,10.5vw,54px);
+      line-height:.9;
+      letter-spacing:1px;
+      color:#1a6dff;
+      opacity:.10;
+      text-transform:uppercase;
+      text-align:center;
+      width:120%;
+      pointer-events:none;
+      user-select:none;
+      white-space:nowrap;
+    }
+
     .user{
-  position:absolute;
-  left:50%;
-  bottom:0;
-  transform:translateX(-50%);
-  width:112%;
-  height:auto;
+      position:absolute;
+      left:50%;
+      bottom:0;
+      transform:translateX(-50%);
+      width:120%;
+      max-width:none;
+      height:auto;
     }
+
     .banner{
       position:absolute;
-      right:18px;
-      bottom:74px;
-      width:185px;
+      right:clamp(12px,3.6vw,18px);
+      bottom:clamp(46px,11vw,74px);
+      width:clamp(160px,42vw,185px);
       height:auto;
       border-radius:14px;
-      filter:drop-shadow(0 18px 26px rgba(0,0,0,.22));
+      filter:drop-shadow(0 18px 26px rgba(0,0,0,.20));
     }
-    @media (max-width:420px){
-      .phone{width:100%}
-      .screen{padding:30px 20px 0}
-      .lower{height:410px}
-      .watermark{font-size:50px}
-      .banner{width:175px;right:14px}
+
+    @media (min-width: 560px){
+      .stage{
+        align-items:center;
+        justify-content:center;
+        padding:24px;
+      }
+      .phone{
+        width:390px;
+        max-width:390px;
+        height:100dvh;
+        max-height:844px;
+        border-radius:18px;
+        box-shadow:0 20px 70px rgba(0,0,0,.55);
+      }
     }
- @media (max-width: 480px){
-  .stage{
-    padding:0;
-    align-items:flex-start;
-    justify-content:flex-start;
-  }
-  .phone{
-    width:100vw;
-    max-width:100vw;
-    border-radius:0;
-  }
-}
+
+    @supports not (height: 100dvh){
+      .stage{height:100vh}
+      .phone{height:100vh}
+    }
   </style>
 </head>
 <body>
   <div class="stage">
     <div class="phone">
       <div class="screen">
-        <div class="top">
-          <img class="logo" src="logo.png" alt="Logo">
-          <img class="cover" src="cover.png" alt="Cover">
-        </div>
-
-        <img class="title" src="title.svg" alt="Title">
-
-        <div class="mid">
-          <div class="hint">Yuklab olish uchun</div>
-          <div class="btnwrap">
-            <a class="btn" href="TELEGRAM_LINK" target="_blank" rel="noopener">TELEGRAM KANAL</a>
+        <div class="upper">
+          <div class="top">
+            <img class="logo" src="logo.png" alt="Logo">
+            <img class="cover" src="cover.png" alt="Cover">
           </div>
-          <div class="timer" id="timer">03:00</div>
+
+          <img class="title" src="title.svg" alt="Title">
+
+          <div class="mid">
+            <div class="hint">Yuklab olish uchun</div>
+            <div class="btnwrap">
+              <a class="btn" href="TELEGRAM_LINK" target="_blank" rel="noopener">TELEGRAM KANAL</a>
+            </div>
+            <div class="timer" id="timer">03:00</div>
+          </div>
         </div>
 
         <div class="lower">
+          <div class="watermark">UNIVERSAL<br>STANDARTLAR</div>
           <img class="user" src="user.png" alt="User">
           <img class="banner" src="banner.svg" alt="Info">
         </div>
@@ -139,18 +237,18 @@
       var total = 180;
       var el = document.getElementById('timer');
 
-      function pad(n) { return n < 10 ? '0' + n : '' + n; }
-      function render() {
-        var m = Math.floor(total / 60);
-        var s = total % 60;
-        el.textContent = pad(m) + ':' + pad(s);
+      function pad(n){return n<10?'0'+n:''+n}
+      function render(){
+        var m = Math.floor(total/60);
+        var s = total%60;
+        el.textContent = pad(m)+':'+pad(s);
       }
 
       render();
 
-      var t = setInterval(function () {
+      var t = setInterval(function(){
         total -= 1;
-        if (total <= 0) {
+        if(total <= 0){
           total = 0;
           render();
           clearInterval(t);
