@@ -1,1 +1,77 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universal Standartlar</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0c1014}
+    .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .phone{
+      width:390px;max-width:92vw;background:#fff;border-radius:18px;
+      box-shadow:0 25px 70px rgba(0,0,0,.45);
+      overflow:hidden
+    }
+    .in{padding:22px 22px 0}
+    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+    .logo{width:92px;height:auto;margin-top:8px}
+    .cover{width:86px;height:auto}
+    .title{display:block;width:100%;height:auto;margin:18px auto 0}
+    .center{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 0 0}
+    .timer{background:#e60000;color:#fff;border-radius:12px;padding:8px 18px;font-weight:800;letter-spacing:.5px;font-size:18px;line-height:1;box-shadow:0 10px 22px rgba(230,0,0,.28);margin:14px 0 12px}
+    .hint{color:#1b1b1b;font-size:14px;margin:6px 0 10px}
+    .btnwrap{position:relative;display:flex;justify-content:center}
+    .btnwrap:after{
+      content:"";position:absolute;right:-10px;top:-18px;width:54px;height:54px;border:2px dashed #1b62ff;
+      border-radius:50%;opacity:.35;transform:rotate(10deg)
+    }
+    .btn{
+      display:inline-block;text-decoration:none;color:#fff;background:linear-gradient(180deg,#2f7dff,#1a5cff);
+      padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:.6px;
+      box-shadow:0 14px 28px rgba(26,92,255,.28), 0 6px 12px rgba(0,0,0,.12)
+    }
+    .hero{
+      margin-top:12px;position:relative;display:flex;justify-content:center;align-items:flex-end;
+      height:360px
+    }
+    .user{width:100%;height:auto;max-width:420px;position:absolute;bottom:0;left:50%;transform:translateX(-50%)}
+    .banner{
+      position:absolute;right:18px;bottom:20px;width:250px;max-width:70%;
+      height:auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.22))
+    }
+    @media (max-width:420px){
+      .phone{width:100%}
+      .in{padding:18px 18px 0}
+      .hero{height:340px}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="phone">
+      <div class="in">
+        <div class="top">
+          <img class="logo" src="logo.png" alt="Logo">
+          <img class="cover" src="cover.png" alt="Cover">
+        </div>
 
+        <img class="title" src="title.svg" alt="Title">
+
+        <div class="center">
+          <div class="timer">00:03</div>
+          <div class="hint">Yuklab olish uchun</div>
+          <div class="btnwrap">
+            <a class="btn" href="TELEGRAM_LINK" target="_blank" rel="noopener">TELEGRAM KANAL</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <img class="user" src="user.png" alt="User">
+        <img class="banner" src="banner.svg" alt="Info">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
