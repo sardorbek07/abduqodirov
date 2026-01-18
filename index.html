@@ -1,56 +1,116 @@
 <!doctype html>
 <html lang="uz">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Universal Standartlar</title>
   <style>
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0c1014}
     .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-    .phone{
-      width:390px;max-width:92vw;background:#fff;border-radius:18px;
-      box-shadow:0 25px 70px rgba(0,0,0,.45);
-      overflow:hidden
-    }
-    .in{padding:22px 22px 0}
-    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
-    .logo{width:92px;height:auto;margin-top:8px}
-    .cover{width:86px;height:auto}
-    .title{display:block;width:100%;height:auto;margin:18px auto 0}
-    .center{display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 0 0}
-    .timer{background:#e60000;color:#fff;border-radius:12px;padding:8px 18px;font-weight:800;letter-spacing:.5px;font-size:18px;line-height:1;box-shadow:0 10px 22px rgba(230,0,0,.28);margin:14px 0 12px}
-    .hint{color:#1b1b1b;font-size:14px;margin:6px 0 10px}
-    .btnwrap{position:relative;display:flex;justify-content:center}
+    .phone{width:390px;max-width:92vw;background:#fff;box-shadow:0 20px 70px rgba(0,0,0,.55);overflow:hidden}
+    .screen{background:#f2f2f2;position:relative;padding:34px 26px 0}
+    .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    .logo{width:92px;height:auto;margin-top:26px}
+    .cover{width:92px;height:auto;filter:drop-shadow(0 18px 18px rgba(0,0,0,.22))}
+    .title{width:100%;height:auto;display:block;margin:26px auto 0}
+    .mid{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 0 0}
+    .hint{font-size:14px;color:#1b1b1b;margin:8px 0 12px}
+    .btnwrap{position:relative;display:flex;justify-content:center;width:100%}
     .btnwrap:after{
-      content:"";position:absolute;right:-10px;top:-18px;width:54px;height:54px;border:2px dashed #1b62ff;
-      border-radius:50%;opacity:.35;transform:rotate(10deg)
+      content:"";
+      position:absolute;
+      right:10px;
+      top:10px;
+      width:58px;
+      height:58px;
+      border:2px dashed rgba(33,102,255,.45);
+      border-radius:50%;
+      transform:rotate(10deg);
+      pointer-events:none;
     }
     .btn{
-      display:inline-block;text-decoration:none;color:#fff;background:linear-gradient(180deg,#2f7dff,#1a5cff);
-      padding:14px 28px;border-radius:10px;font-weight:800;letter-spacing:.6px;
-      box-shadow:0 14px 28px rgba(26,92,255,.28), 0 6px 12px rgba(0,0,0,.12)
+      width:100%;
+      max-width:290px;
+      background:linear-gradient(180deg,#2f8bff,#1a6dff);
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.6px;
+      padding:14px 18px;
+      border-radius:12px;
+      box-shadow:0 16px 30px rgba(26,109,255,.35),0 8px 16px rgba(0,0,0,.14);
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
     }
-    .hero{
-      margin-top:12px;position:relative;display:flex;justify-content:center;align-items:flex-end;
-      height:360px
+    .timer{
+      margin:16px 0 0;
+      background:#ff0000;
+      color:#fff;
+      font-weight:900;
+      letter-spacing:.8px;
+      padding:10px 22px;
+      border-radius:12px;
+      box-shadow:0 14px 26px rgba(255,0,0,.25);
+      font-size:18px;
+      line-height:1;
+      min-width:110px;
+      text-align:center;
     }
-    .user{width:100%;height:auto;max-width:420px;position:absolute;bottom:0;left:50%;transform:translateX(-50%)}
+    .lower{
+      position:relative;
+      height:430px;
+      margin-top:14px;
+      overflow:hidden;
+    }
+    .watermark{
+      position:absolute;
+      left:50%;
+      top:40px;
+      transform:translateX(-50%);
+      font-weight:900;
+      font-size:54px;
+      line-height:.9;
+      letter-spacing:1px;
+      color:#1a6dff;
+      opacity:.10;
+      text-transform:uppercase;
+      text-align:center;
+      width:120%;
+      pointer-events:none;
+      user-select:none;
+    }
+    .user{
+      position:absolute;
+      left:50%;
+      bottom:-10px;
+      transform:translateX(-50%);
+      width:112%;
+      height:auto;
+    }
     .banner{
-      position:absolute;right:18px;bottom:20px;width:250px;max-width:70%;
-      height:auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.22))
+      position:absolute;
+      right:18px;
+      bottom:74px;
+      width:185px;
+      height:auto;
+      border-radius:14px;
+      filter:drop-shadow(0 18px 26px rgba(0,0,0,.22));
     }
     @media (max-width:420px){
       .phone{width:100%}
-      .in{padding:18px 18px 0}
-      .hero{height:340px}
+      .screen{padding:30px 20px 0}
+      .lower{height:410px}
+      .watermark{font-size:50px}
+      .banner{width:175px;right:14px}
     }
   </style>
 </head>
 <body>
   <div class="stage">
     <div class="phone">
-      <div class="in">
+      <div class="screen">
         <div class="top">
           <img class="logo" src="logo.png" alt="Logo">
           <img class="cover" src="cover.png" alt="Cover">
@@ -58,20 +118,48 @@
 
         <img class="title" src="title.svg" alt="Title">
 
-        <div class="center">
-          <div class="timer">00:03</div>
+        <div class="mid">
           <div class="hint">Yuklab olish uchun</div>
           <div class="btnwrap">
             <a class="btn" href="TELEGRAM_LINK" target="_blank" rel="noopener">TELEGRAM KANAL</a>
           </div>
+          <div class="timer" id="timer">03:00</div>
         </div>
-      </div>
 
-      <div class="hero">
-        <img class="user" src="user.png" alt="User">
-        <img class="banner" src="banner.svg" alt="Info">
+        <div class="lower">
+          <div class="watermark">UNIVERSAL<br>STANDARTLAR</div>
+          <img class="user" src="user.png" alt="User">
+          <img class="banner" src="banner.svg" alt="Info">
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var total = 180;
+      var el = document.getElementById('timer');
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function render() {
+        var m = Math.floor(total / 60);
+        var s = total % 60;
+        el.textContent = pad(m) + ':' + pad(s);
+      }
+
+      render();
+
+      var t = setInterval(function () {
+        total -= 1;
+        if (total <= 0) {
+          total = 0;
+          render();
+          clearInterval(t);
+          return;
+        }
+        render();
+      }, 1000);
+    })();
+  </script>
 </body>
 </html>
